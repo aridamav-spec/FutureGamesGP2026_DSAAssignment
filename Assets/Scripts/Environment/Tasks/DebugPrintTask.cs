@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Environment.Tasks {
-    [CreateAssetMenu(fileName = "DebugPrint Task", menuName = "DebugPrint Task")]
+    [CreateAssetMenu(fileName = "Template Task", menuName = "Template Task")]
     public class DebugPrintTask : Task {
         [SerializeField]
         private string textToPrint = "Hi, I'm a test task!";
-
+        [SerializeField] private int bunger = 0;
         public override void Execute() {
-            Debug.Log(textToPrint);
+            Debug.Log(textToPrint + " " + bunger);
         }
     }
 }
