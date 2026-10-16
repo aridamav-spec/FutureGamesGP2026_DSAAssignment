@@ -7,7 +7,7 @@ namespace Environment.Tasks {
         private string textToPrint = "Hi, I'm a test task!";
 
         public override void Execute() {
-            Debug.Log(textToPrint);
+            
         }
     }
 }
