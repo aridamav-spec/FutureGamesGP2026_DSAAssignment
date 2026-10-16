@@ -5638,9 +5638,69 @@ PrefabInstance:
       value: 3.0195637
       objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: task
+      value: 
+      objectReference: {fileID: 11400000, guid: fe732c34376da3e498a7c590b5224a63, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: task1
+      value: 
+      objectReference: {fileID: 11400000, guid: fe732c34376da3e498a7c590b5224a63, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: task2
+      value: 
+      objectReference: {fileID: 11400000, guid: 429e7757416522f4bafcd9bf3f9d6a50, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: task3
+      value: 
+      objectReference: {fileID: 11400000, guid: f080872eb70febd49aafb94c3da2a062, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: tasks
+      value: 
+      objectReference: {fileID: 11400000, guid: fe732c34376da3e498a7c590b5224a63, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: testTask
       value: 
       objectReference: {fileID: 11400000, guid: fe732c34376da3e498a7c590b5224a63, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: testTask2
+      value: 
+      objectReference: {fileID: 11400000, guid: 429e7757416522f4bafcd9bf3f9d6a50, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: testTask3
+      value: 
+      objectReference: {fileID: 11400000, guid: f080872eb70febd49aafb94c3da2a062, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: tasks.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'tasks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fe732c34376da3e498a7c590b5224a63, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'tasks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 429e7757416522f4bafcd9bf3f9d6a50, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'tasks.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f080872eb70febd49aafb94c3da2a062, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: taskarray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'taskarray.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fe732c34376da3e498a7c590b5224a63, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'taskarray.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 429e7757416522f4bafcd9bf3f9d6a50, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'taskarray.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f080872eb70febd49aafb94c3da2a062, type: 2}
     - target: {fileID: 5694532769315531512, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

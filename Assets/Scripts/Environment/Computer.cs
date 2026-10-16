@@ -1,13 +1,28 @@
 ﻿using Environment.Tasks;
+using NUnit.Framework;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
-using Utils;
+using Task = Environment.Tasks.Task;
 
 namespace Environment {
     public class Computer : MonoBehaviour, IInteractable {
         [SerializeField]
-        private Task testTask = null; // Put your stack/queue here :)
-
-        private void Awake() {
+        public List<Task> tasks = new List<Task>();
+        public Task activetask;
+        private GenericQueue<Task> taskqueue = new GenericQueue<Task>();
+        private void Start()
+        {
+            taskqueue.Enqueue(tasks.ElementAt(0));
+            taskqueue.Enqueue(tasks.ElementAt(1));
+            taskqueue.Enqueue(tasks.ElementAt(2));
+        }
+        private void Awake()
+        {
             GenericQueue<int> _queue = new GenericQueue<int>();
             _queue.Enqueue(1);
             int dequeuedInt = _queue.Dequeue();
@@ -18,8 +33,11 @@ namespace Environment {
             bool dequeuedBool = _boolQueue.Dequeue();
         }
 
-        public void OnInteract() {
-            testTask.Execute();
+        public void OnInteract()
+        {
+            activetask = taskqueue.BringToTop();
+            activetask.Execute();
+            taskqueue.Dequeue();
         }
     }
 }
