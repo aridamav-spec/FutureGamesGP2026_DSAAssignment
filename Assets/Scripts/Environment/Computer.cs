@@ -10,6 +10,19 @@ using UnityEngine;
 using Task = Environment.Tasks.Task;
 
 namespace Environment {
+    [Serializable]
+    public class Employee {
+        public string name;
+        public int employeeId;
+        public bool hasEngineRoomClearance;
+        public string lastEntranceInEngineRoom;
+        public string lastExitFromEngineRoom;
+    }
+
+    [Serializable]
+    public class EmployeeArray {
+        public Employee[] employees;
+    }
     public class Computer : MonoBehaviour, IInteractable {
         [SerializeField]
         public List<Task> tasks = new List<Task>();
@@ -33,11 +46,31 @@ namespace Environment {
             bool dequeuedBool = _boolQueue.Dequeue();
         }
 
+        [SerializeField]
+        private TextAsset EmployeeJson = null;
         public void OnInteract()
         {
             activetask = taskqueue.BringToTop();
             activetask.Execute();
             taskqueue.Dequeue();
+
+            if(EmployeeJson != null) {
+                return;
+            }
+
+            Employee[] employees = JsonUtility.FromJson<EmployeeArray>(EmployeeJson.text).employees;
+
+            if (employees != null && employees.Length > 0) {
+                return;
+            }
+
+            foreach(Employee employee in employees) {
+                Debug.Log("Name: " + employee.name);
+                Debug.Log("Employee ID: " + employee.employeeId);
+                Debug.Log("Has Engine Room Clearance: " + employee.hasEngineRoomClearance);
+                Debug.Log("Last Entrance in Engine Room: " + employee.lastEntranceInEngineRoom);
+                Debug.Log("Last Exit from Engine Room: " + employee.lastExitFromEngineRoom);
+            }
         }
     }
 }
