@@ -5690,6 +5690,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f080872eb70febd49aafb94c3da2a062, type: 2}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'tasks.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f080872eb70febd49aafb94c3da2a062, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: taskarray.Array.size
       value: 3
       objectReference: {fileID: 0}

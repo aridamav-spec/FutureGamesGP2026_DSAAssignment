@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e8befb5ae1445bba8af71ae2821eb5, type: 3}
   m_Name: DebugPrint Task 3
   m_EditorClassIdentifier: Assembly-CSharp::Environment.Tasks.DebugPrintTask
+  activetasknumD: 2
+  employeeJson: {fileID: 4900000, guid: 5feebad1117ac4f42acdcb560d313b74, type: 3}
   textToPrint: And here is test task 3
