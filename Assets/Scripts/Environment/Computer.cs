@@ -3,7 +3,9 @@ using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -17,6 +19,12 @@ namespace Environment {
         public bool hasEngineRoomClearance;
         public string lastEntranceInEngineRoom;
         public string lastExitFromEngineRoom;
+        public DateTime entranceTime;
+        public DateTime exitTime;
+        public void dtconvert() {
+            entranceTime = DateTime.ParseExact(lastEntranceInEngineRoom, "yyyy-MM-ddTHH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+            exitTime = DateTime.ParseExact(lastExitFromEngineRoom, "yyyy-MM-ddTHH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+        }
     }
 
     [Serializable]
@@ -27,7 +35,10 @@ namespace Environment {
         [SerializeField]
         public List<Task> tasks = new List<Task>();
         public Task activetask;
+        [SerializeField]
+        private TextAsset EmployeeJson = null;
         private GenericQueue<Task> taskqueue = new GenericQueue<Task>();
+        
         private void Start()
         {
             taskqueue.Enqueue(tasks.ElementAt(0));
@@ -36,6 +47,7 @@ namespace Environment {
         }
         private void Awake()
         {
+
             GenericQueue<int> _queue = new GenericQueue<int>();
             _queue.Enqueue(1);
             int dequeuedInt = _queue.Dequeue();
@@ -46,8 +58,7 @@ namespace Environment {
             bool dequeuedBool = _boolQueue.Dequeue();
         }
 
-        [SerializeField]
-        private TextAsset EmployeeJson = null;
+
         public void OnInteract()
         {
             activetask = taskqueue.BringToTop();
