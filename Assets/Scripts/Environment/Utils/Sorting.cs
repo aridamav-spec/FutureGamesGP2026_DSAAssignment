@@ -27,7 +27,7 @@ public class Sorting
         }
     }
     public static void merge(Employee[] arrayToSort, int left, int mid, int right) {
-        int leftSize = mid - left;
+        int leftSize = mid - left + 1;
         int rightSize = right - mid;
         Employee[] leftArray = new Employee[leftSize];
         Employee[] rightArray = new Employee[rightSize];
