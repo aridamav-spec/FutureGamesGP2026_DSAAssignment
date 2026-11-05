@@ -5688,7 +5688,7 @@ PrefabInstance:
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'tasks.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: f080872eb70febd49aafb94c3da2a062, type: 2}
+      objectReference: {fileID: 11400000, guid: 8211b43e65060a04e8bf0f6ca7fb9247, type: 2}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'tasks.Array.data[3]'
       value: 
